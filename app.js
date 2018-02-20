@@ -23,29 +23,7 @@ client.on('ready', () => {
   
   case "help":
   message.author.sendMessage("Hello there! ");
-  
-  case "kick":
-let modRole = message.guild.roles.find("name", "Admin");
-if (!message.member.roles.has(modRole.id)){
-return message.reply("You don't have the role Admin.");
-}
-if (message.mentions.users.size == 0){
-return message.reply("Please mention a user.");
-}
-let kickMember = message.guild.member(message.mentions.users.first());
-if (!kickMember){
-return message.reply("Invalid user"); 
-}
-if (!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")){
-return message.reply("I don't have permissions, woops!");
-}
-kickMember.Kick();
-kickMember.sendMessage("You have been removed from the $(message.Guild.Name) server. You can rejoin.");
-let logs = message.guild.channels.find("name", "Logs");
-logs.sendMessage("$(kickMember) has been kicked from the server!")
-
-break;
-  
+    
   defult:
   message.channel.sendMessage(" :no_entry:  That command is invalied. The prefix is **~**. For a list of valid commands do **~cmds!**");
     } 
