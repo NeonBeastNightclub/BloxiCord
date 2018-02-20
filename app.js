@@ -26,6 +26,7 @@ client.on('ready', () => {
   break;
   
   case "info":
+           message.reply("check your DMs!");
   var embedinfo = new Discord.RichEmbed()
 .setFooter("© BloxiCord | Owned by The Bot Company & predator.co!")
 .setColor("0x7DCEA0")
@@ -37,7 +38,6 @@ client.on('ready', () => {
 .addField(":moneybag: How much does it cost?", "The regular bot is free! When we release the paid version, it will have more functions but BloxiCord will always be free.")
 .addField(":inbox_tray: BloxiCord Bot Invite", "**Click this button for an invite link:** [<:dl:382568980218511361>](https://discordapp.com/oauth2/authorize?client_id=414823685770444801&scope=bot&permissions=502627454)")")
 message.author.sendEmbed(embedinfo);
-message.reply("check your DMs!");
   break;
            
   defult:
