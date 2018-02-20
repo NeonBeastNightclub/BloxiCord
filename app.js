@@ -23,7 +23,8 @@ client.on('ready', () => {
   
   case "help":
   message.author.sendMessage("Hello there! ");
-    
+  break;
+           
   defult:
   message.channel.sendMessage(" :no_entry:  That command is invalied. The prefix is **~**. For a list of valid commands do **~cmds!**");
     } 
