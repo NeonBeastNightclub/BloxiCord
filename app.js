@@ -36,8 +36,8 @@ client.on('ready', () => {
 .addField(":telephone_receiver: Support?", "Struggling with BloxiCord? Found a bug? Have a suggestion of a feature you want us to add? Feel free to join our discord offical server (link below)! If you do require help simply head to the support channel and run the `~support` command!")
 .addField(":moneybag: How much does it cost?", "The regular bot is free! When we release the paid version, it will have more functions but BloxiCord will always be free.")
 .addField(":inbox_tray: BloxiCord Bot Invite", "**Click this button for an invite link:** [<:dl:382568980218511361>](https://discordapp.com/oauth2/authorize?client_id=414823685770444801&scope=bot&permissions=502627454)")")
+message.reply("check your DM's!");
 message.author.sendEmbed(embedinfo);
-message.reply(", check your DM's for our information!")
   break;
            
   defult:
