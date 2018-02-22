@@ -25,6 +25,13 @@ client.on('ready', () => {
   message.author.sendMessage("Hello there! ");
   break;
   
+  case "support":
+let help = message.author
+message.reply(", we are contacting staff. Please wait a moment, one will be with you shortly.")
+let staffc =  message.guild.channels.find("name", "support-staff")
+staffc.sendMessage(`@support ${message.author.username} needs help in #Customer-Support!`)
+break ;
+           
   case "info":
            message.reply("check your DMs!");
   var embedinfo = new Discord.RichEmbed()
