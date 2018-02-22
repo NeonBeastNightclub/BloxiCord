@@ -27,10 +27,9 @@ client.on('ready', () => {
   
   case "support":
 let help = message.author
-let supportrole = <@416285748942077963>
 message.reply(" we are contacting staff. Please wait a moment, one will be with you shortly.")
 let staffc =  message.guild.channels.find("name", "support-staff")
-staffc.sendMessage(`${supportrole}, ${message.author.username} needs help in #Customer-Support!`)
+staffc.sendMessage(`<@416285748942077963>, ${message.author.username} needs help in #Customer-Support!`)
 break ;
            
   case "info":
