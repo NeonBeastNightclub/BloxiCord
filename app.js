@@ -12,6 +12,7 @@ client.on('ready', () => {
     client.user.setStatus("online");
   });
 
+  client.on("message", function(message) {
   if (message.author.equals(client.user)) return;
 
   if (!message.content.startsWith(prefix)) return;
@@ -22,8 +23,8 @@ client.on('ready', () => {
   
   case "help":
   message.author.sendMessage("Hello there! ");
-  break;        
-           
+  break;
+  
   case "support":
 let help = message.author
 message.reply(" we are contacting staff. Please wait a moment.")
