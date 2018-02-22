@@ -18,7 +18,7 @@ client.on('ready', () => {
   if (!message.content.startsWith(prefix)) return;
 
   var args = message.content.substring(prefix.length).split(" ");
-  
+  https://github.com/iTrxpical/BloxiCord/pulls
    switch (args[0].toLowerCase()) {
   
   case "help":
@@ -29,7 +29,7 @@ client.on('ready', () => {
 let help = message.author
 message.reply(" we are contacting staff. Please wait a moment, one will be with you shortly.")
 let staffc =  message.guild.channels.find("name", "support-staff")
-staffc.sendMessage(`@support ${message.author.username} needs help in #Customer-Support!`)
+staffc.sendMessage(`@Support  ${message.author.username} needs help in #Customer-Support!`)
 break ;
            
   case "info":
