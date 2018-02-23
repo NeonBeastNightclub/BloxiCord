@@ -26,15 +26,11 @@ client.on('ready', () => {
   break;
            
  case "support":
-if (message.channel.id === 416284519453163521) {
 let help = message.author
 message.reply(" we are contacting staff. Please wait a moment.")
 let staffc =  message.guild.channels.find("name", "support-staff")
 staffc.sendMessage(`<@&416285748942077963>, ${message.author.username} needs help in <#416284519453163521>!`)
-break ;  
-} else {
-message.reply("This command can only be run in our customer support chat. To join our discord run `~join`!")
-break;    
+break ;    
            
   case "info":
            message.reply("check your DMs!");
