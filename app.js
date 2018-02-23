@@ -14,7 +14,7 @@ client.on('ready', () => {
 
   client.on("message", function(message) {
       
-if (message.channel.id === 416284519453163521)) {
+if (message.channel.id === 416284519453163521) {
 if (message.content.toLowerCase === "~support") return;
    let help = message.author
 message.reply(" we are contacting staff. Please wait a moment.")
