@@ -36,7 +36,8 @@ staffc.sendMessage(`<@&416285748942077963>, ${message.author.username} needs hel
 break ;  
 } else {
 message.reply("This command can only be run in our customer support chat. To join our discord run `~join`!")
-  };
+break;    
+};
            
   case "info":
            message.reply("check your DMs!");
