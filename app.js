@@ -28,7 +28,7 @@ client.on('ready', () => {
 
            
   case "support":
-if (message.channel.id === 416284519453163521){
+if (message.channel.id === 416284519453163521)) {
 let help = message.author
 message.reply(" we are contacting staff. Please wait a moment.")
 let staffc =  message.guild.channels.find("name", "support-staff")
