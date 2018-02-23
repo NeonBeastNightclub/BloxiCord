@@ -55,5 +55,3 @@ message.author.sendEmbed(embedinfo);
 })
 
 client.login(process.env.TOKEN);
-  
-};
