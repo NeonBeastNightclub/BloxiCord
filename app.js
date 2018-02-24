@@ -35,8 +35,7 @@ break;
  } else {
 message.reply("Unfortunately this can only be done in our customer support channel. To join our server run `~join` or `~info`!")
 return;
-
-});
+};
  
            
   case "info":
