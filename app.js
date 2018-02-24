@@ -23,7 +23,7 @@ return;
 message.reply("Unfortunately this can only be done in our customer support channel. To join our server run `~join` or `~info`!")
 return;
 
-});
+};
 
   client.on("message", function(message) {    
   if (message.author.equals(client.user)) return;
