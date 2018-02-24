@@ -21,7 +21,7 @@ staffc.sendMessage(`<@&416285748942077963>, ${message.author.username} needs hel
 return;  
  } else {
 message.reply("Unfortunately this can only be done in our customer support channel. To join our server run `~join` or `~info`!")
-break;
+return;
 
 });
 
