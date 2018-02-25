@@ -27,11 +27,11 @@ client.on('ready', () => {
            
 case "purge":
 
-if (isNaN(args[0])) return message.channel.send("**Please Supply a Valid Number!**");
-if (args[0] > 100) return message.channel.send("**In a single purge, there is a max of 100 messages.**");
+if (isNaN(args[1])) return message.channel.send("**Please Supply a Valid Number!**");
+if (args[1] > 100) return message.channel.send("**In a single purge, there is a max of 100 messages.**");
 
 message.channel.bulkDelete(args[0])
-.then ( messages => message.channel.send(`**Successfully Deleted \`${messages.size}/$args[0]\` messages.**`).then ( msg.delete({ timeout: 10})))
+.then ( messages => message.channel.send(`**Successfully Deleted \`${messages.size}/$args[1]\` messages.**`).then ( msg.delete({ timeout: 10})))
 .catch (error => message.channel.send(`There has been an error, $error.message}`));
 
 break;
