@@ -35,6 +35,7 @@ message.channel.bulkDelete(args[1])
 .then(message => {
     message.delete(10000)
   }))
+break;
            
 case "support":
 if (message.channel.id === "416284519453163521") {
