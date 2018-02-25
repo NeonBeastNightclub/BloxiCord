@@ -32,8 +32,6 @@ if (args[1] > 100) return message.channel.send("**In a single purge, there is a 
 
 message.channel.bulkDelete(args[1])
 .then ( messages => message.channel.send(`**Successfully Deleted \`${messages.size}/${args[1]}\` messages.**`).then ( msg.delete({ timeout: 10})))
-.catch (error => message.channel.send(`There has been an error, $error.message}`));
-
 break;
            
 case "support":
