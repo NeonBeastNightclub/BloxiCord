@@ -27,7 +27,7 @@ client.on('ready', () => {
            
 case "purge":
 
-if (isNaN(args[0]) return message.channel.send("**Please Supply a Valid Number!**");
+if (isNaN(args[0])) return message.channel.send("**Please Supply a Valid Number!**");
 if (args[0] > 100) return message.channel.send("**In a single purge, there is a max of 100 messages.**");
 
 message.channel.bulkDelete(args[0])
