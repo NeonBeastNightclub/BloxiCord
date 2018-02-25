@@ -34,7 +34,7 @@ message.channel.bulkDelete(args[1])
 .then ( messages => message.channel.send(`**Successfully Deleted \`${messages.size}/${args[1]}\` messages.**`)
 .then(message => {
     message.delete(10000)
-  })
+  })))
            
 case "support":
 if (message.channel.id === "416284519453163521") {
