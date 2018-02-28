@@ -45,7 +45,7 @@ if (args.join(" ")) return message.channel.send("**Incorrect Usage**. `~setprefi
 
 db.updateText(`guildPrefix_${message.guild.id}`, args.join().trim()).then(i => {
 
-message.channel.send('__**Prefix Changed To:**__ + i.text);
+message.channel.send('__**Prefix Changed To:**__' + i.text);
 
 })
 
