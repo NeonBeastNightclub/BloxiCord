@@ -15,6 +15,8 @@ client.on('ready', () => {
 
   client.on("message", function(message) {    
 
+ if (message.channel.type != 'text') return message.channel.send("All commands must be used in a server with BloxiCord. Not in DM's");
+
 db.fetchObject(`guildPrefix_${message.guild.id}`).then(i => {
 
 let prefix;
@@ -37,6 +39,16 @@ if (i.text) {
   message.author.sendMessage("Hello there! ");
   break;
            
+  case "setprefix":
+if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send("You have not got the permissions, if there is a problem contact the server administrator to run the command `~setup`!");
+if (args.join(" ")) return message.channel.send("**Incorrect Usage**. `~setprefix <prefix>`");
+
+db.updateText(`guildPrefix_${message.guild.id}`, args.join().trim()).then(i => {
+
+message.channel.send('__**Prefix Changed To:**__ + i.text);
+
+})
+
 case "purge":
 
 if (isNaN(args[1])) return message.channel.send("**Please Supply a Valid Number!**");
