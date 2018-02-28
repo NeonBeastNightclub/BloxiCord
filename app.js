@@ -1,9 +1,10 @@
 // BloxiCord Discord Bot Code
-// Version: 0.01 ALPHA
+// Version: 0.5 PRE-ALPHA PRE-REALEASE
 // Discord Code: WxUPp3P
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const db = require('quick.db');
 const prefix = '~';
 
 client.on('ready', () => {
@@ -13,6 +14,17 @@ client.on('ready', () => {
   });
 
   client.on("message", function(message) {    
+
+db.fetchObject(`guildPrefix_${message.guild.id}`).then(i => {
+
+let prefix;
+    
+if (i.text) {
+    prefix = i.text
+} else {
+    prefix = '~' // DEFULT
+}
+
   if (message.author.equals(client.user)) return;
 
   if (!message.content.startsWith(prefix)) return;
@@ -20,7 +32,7 @@ client.on('ready', () => {
   var args = message.content.substring(prefix.length).split(" ");
   https://github.com/iTrxpical/BloxiCord/pulls
    switch (args[0].toLowerCase()) {
-  
+           
   case "help":
   message.author.sendMessage("Hello there! ");
   break;
@@ -71,5 +83,7 @@ message.author.sendEmbed(embedinfo);
   message.channel.sendMessage(" :no_entry:  That command is invalied. The prefix is **~**. For a list of valid commands do **~cmds!**");
     } 
 })
+
+  })
 
 client.login(process.env.TOKEN);
