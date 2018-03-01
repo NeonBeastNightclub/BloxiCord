@@ -9,7 +9,7 @@ const prefix = '~';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs on BloxiCord.`);
-    client.user.setPresence({ game: { name: 'on servers! | ~help', type: '3' } });
+    client.user.setActivity('over ' + client.guilds.size + ' servers! | ~help', { type: 'WATCHING' });
     client.user.setStatus("online");
   });
 
