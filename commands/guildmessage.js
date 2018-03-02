@@ -1,6 +1,6 @@
 exports.run = (Discord, client, message, args) => {
 
-if (!message.author === '255048840615428107') return;
+if (!message.author.id === '255048840615428107') return;
 
     var guildList = client.channel.first.array();
 try {
