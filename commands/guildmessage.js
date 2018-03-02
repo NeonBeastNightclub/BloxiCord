@@ -6,7 +6,7 @@ let guildList = client.guilds;
 try {
     guildList.forEach((g) => {
         let firstChannel = g.channels.filter(c => c.type === "text").first();
-        firstChannel.send(args);
+        firstChannel.send(args.join(" "));
     });
 } catch(err) {
     console.log("Unable to broadcast message.");
