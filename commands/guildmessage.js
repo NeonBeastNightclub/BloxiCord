@@ -1,12 +1,15 @@
 exports.run = (Discord, client, message, args) => {
 
-if (!message.author.id === '255048840615428107') return;
+if(message.author.id !== "255048840615428107") return;
 
-    var guildList = client.guilds.array();
+let guildList = client.guilds;
 try {
-    guildList.forEach(guild => guild.channel.first().send(args));
-} catch (err) {
-    console.log("Could not send message to " + guild.name);
+    guildList.forEach((g) => {
+        let firstChannel = g.channels.filter(c => c.type === "text").first();
+        firstChannel.send(args);
+    });
+} catch(err) {
+    console.log("Unable to broadcast message.");
 }
 
 }
